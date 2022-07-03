@@ -1,2 +1,2 @@
-# weather-app-fetch-API-
+# weather-app-fetch-API
 Weather app created using fetch API
