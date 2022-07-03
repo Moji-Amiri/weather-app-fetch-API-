@@ -1,0 +1,144 @@
+
+:root {
+    --color-primary: rgb(41, 50, 181);
+    --color-secondary: rgb(27, 94, 194);
+    --color-font: whitesmoke;
+    --color-fade: rgba(245, 245, 245, 0.726);;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-font);
+
+    background: linear-gradient(0deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4.2rem;
+    font-weight: 400;
+}
+
+h2, .Weather-desc {
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+.container {
+    margin: auto;
+    max-width: 1140px;
+    padding: 4rem 6rem;
+}
+
+.content {
+    margin: 3rem 0;
+    /* height: 30rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-info {
+    display: flex;
+    padding-right: 4rem; 
+}
+
+
+.degree{
+    font-size: 10rem;
+    font-weight: 300;
+    vertical-align: baseline;
+}
+
+.weather_icon{
+    width: 15rem;
+    margin: auto 3rem auto 0;
+}
+
+
+.secondry-info{
+    border-left: 1px solid var(--color-fade);
+    list-style: none;
+    padding: .5rem 0 2rem .5rem;
+    
+    display: grid;
+    grid-template-rows: 10rem 10rem;
+    grid-template-columns: 10rem 10rem 10rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.info--header {
+    font-size: 2.6rem;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: .2rem;
+}
+
+.info--body {
+    color: var(--color-fade);
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.credit {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--color-fade);
+    position: relative;
+    left: 30px;
+    padding-top: 3rem;
+}
+
+.credit a{
+    text-decoration: none;
+    color: tomato;
+}
+
+a:visited {
+    color: tomato;
+}
+
+a:hover {
+    color: rgb(252, 126, 104);
+}
+
+@media screen and (max-width: 720px) {
+    
+    .content {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .primary-info {
+        padding-bottom: 4rem; 
+    }
+
+    .secondry-info{
+        border-left: none;
+        border-top: 1px solid var(--color-fade);
+        padding: 2rem 1rem 0 1rem;
+    }
+
+    .credit {
+        position: relative;
+        left: 0;
+        padding-top: 3rem;
+    }
+}
