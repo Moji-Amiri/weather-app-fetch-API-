@@ -37,6 +37,43 @@ h2, .Weather-desc {
     font-weight: 300;
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.input-group{
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.input {
+    color: var(--color-font);
+    font-size: 1.6rem;
+    background: rgba(122, 21, 21, 0);
+    padding: 1.25rem 3rem;
+    vertical-align: middle;
+    border: none;
+}
+
+.magnify__icon {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    color: var(--color-fade);
+    vertical-align: middle;
+}
+
+::placeholder {
+    color: var(--color-fade);
+    vertical-align: middle;
+}
+
+.input:focus {
+    outline: none;
+}
+
 .container {
     margin: auto;
     max-width: 1140px;
@@ -119,6 +156,26 @@ a:hover {
 }
 
 @media screen and (max-width: 720px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .input-group{
+        margin-top: 2rem;
+    }
+
+    .input {
+        font-size: 1.4rem;
+        /* padding: 1.25rem 3rem; */
+        padding: 1.25rem 0 1.25rem 1rem;
+        display: inline-block;
+    }
+    
+    .magnify__icon {
+        font-size: 1.75rem;
+        padding: 1rem 1rem;
+    }
     
     .content {
         flex-direction: column;
