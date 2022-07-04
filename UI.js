@@ -25,8 +25,8 @@ class UI {
             <p class="info--body">Wind</p>
           </li>
           <li>
-            <p class="info--header"></p>
-            <p class="info--body">Sunrise</p>
+            <p class="info--header">${Math.floor(data.main.pressure * 0.014)}</p>
+            <p class="info--body">Psi</p>
           </li>
           <li>
             <p class="info--header">${Math.floor(data.main.temp_min)}&deg;</p>
@@ -37,17 +37,13 @@ class UI {
             <p class="info--body">${data.weather[0].main}</p>
           </li>
           <li>
-            <p class="info--header"></p>
-            <p class="info--body">Sunset</p>
+            <p class="info--header">----</p>
+            <p class="info--body">----</p>
           </li>
         `;
         document.querySelector('.secondry-info').innerHTML = infos;
     }
 
-    calculateUnixTime(unix) {
-        const date = new Date(unix * 1000);
-        return `${date.getHours()}:${date.getMinutes()}`;
-    }
 
     clearInput() {
         document.querySelector('.input').value = "";
