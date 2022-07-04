@@ -25,8 +25,8 @@ class UI {
             <p class="info--body">Wind</p>
           </li>
           <li>
-            <p class="info--header">${data.main.humidity}%</p>
-            <p class="info--body">${data.weather[0].main}</p>
+            <p class="info--header"></p>
+            <p class="info--body">Sunrise</p>
           </li>
           <li>
             <p class="info--header">${Math.floor(data.main.temp_min)}&deg;</p>
@@ -37,7 +37,7 @@ class UI {
             <p class="info--body">${data.weather[0].main}</p>
           </li>
           <li>
-            <p class="info--header">${this.calculateUnix(data.sys.sunset)}</p>
+            <p class="info--header"></p>
             <p class="info--body">Sunset</p>
           </li>
         `;
