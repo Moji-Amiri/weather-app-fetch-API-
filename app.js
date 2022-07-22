@@ -4,9 +4,10 @@ import { ui } from "./UI.js";
 
 const input = document.querySelector('.input-group');
 
+
 // Search event listener
 document.addEventListener('DOMContentLoaded', () => {
-    weather.get(`tokyo`)
+    weather.get( localStorage.getItem('city') ? localStorage.getItem('city') : 'Tokyo' )
     .then ( data => {
         ui.show(data);
     })
@@ -21,6 +22,7 @@ input.addEventListener('submit', (e) => {
 
         ui.clearInput();
         ui.show(data);
+        localStorage.setItem('city', inputValue);
     })
     .catch (err => console.log(err)); 
 
